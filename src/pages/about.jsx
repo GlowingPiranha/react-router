@@ -1,4 +1,4 @@
-function about() {
+function About() {
   return (
     <div>
       <h1>Chi siamo</h1>
@@ -7,4 +7,4 @@ function about() {
   );
 }
 
-export default about
+export default About

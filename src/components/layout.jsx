@@ -1,6 +1,6 @@
 import { Outlet, NavLink } from "react-router-dom";
 
-function layout() {
+function Layout() {
   return (
     <div>
       <nav className="navbar">
@@ -25,4 +25,4 @@ function layout() {
   )
 }
 
-export default layout
+export default Layout
