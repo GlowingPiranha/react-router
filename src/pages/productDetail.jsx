@@ -1,31 +1,21 @@
-import { useParams } from "react-router-dom";
-import axios from "axios";
-import { useEffect, useState } from "react";
+export default function ProductDetail() {
+  const sample = [
+    { id: 1, title: "Prodotto A", price: 10 },
+    { id: 2, title: "Prodotto B", price: 20 },
 
-function ProductDetail() {
-  const [products, setProducts] = useState([]);
+  ];
 
-  useEffect(() => {
-    axios.get("https://fakestoreapi.com/products").then((resp) => {
-      setProducts(resp.data);
-    });
-  }, []);
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12">
-          <h1>Pagina Prodotti</h1>
-          <ul>
-            {products.map((p) => (
-              <li key={p.id}>
-                {p.title} - € {p.price}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+    <div>
+      <h1>Prodotti</h1>
+      <ul>
+        {sample.map(p => (
+          <li key={p.id}>
+            {p.title} - € {p.price}
+          </li>
+        ))}
+      </ul>
+
     </div>
   );
 }
-
-export default ProductDetail
